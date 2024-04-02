@@ -6,10 +6,9 @@ def get_button(brand):
         res = f"![{icon.title}](https://img.shields.io/badge/-{icon.slug}-{icon.hex}?logo={icon.slug}&logoColor=white)"
         return res
     else:
-        return "No such brand in Simpleicon DB."
+        return "Brand not found in the icon database."
 
-def main_menu():
-    brand_name = input("Enter brand name: ").lower()
-    return get_button(brand_name)
-
-print(main_menu())
+if __name__ == "__main__":
+    brand_name = input("Enter the brand name: ").lower()
+    result = get_button(brand_name)
+    print(result)
